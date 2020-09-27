@@ -44,8 +44,8 @@ def add_all_links_recursive(url, maxdepth=1):
 
 def main():
     add_all_links_recursive(HOST)
-    foutvalidink = open('valid.txt', 'w')
-    foutinvalidink = open('invalid.txt', 'w')
+    foutvalidink = open('valid.txt', 'w', encoding='utf-8')
+    foutinvalidink = open('invalid.txt', 'w', encoding='utf-8')
     count = 0;
     for link in links:
         headers = {
