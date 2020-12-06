@@ -1,12 +1,6 @@
 import requests
 
-MOUNTEBANK_HOST = "http://localhost"
-MOUNTEBANK_URL = MOUNTEBANK_HOST + ":2525"
-IMPOSTERS_URL = MOUNTEBANK_URL + "/imposters"
-
-requests.delete(IMPOSTERS_URL)
-
-post_info = requests.post(IMPOSTERS_URL, json={
+post_info = requests.post('http://localhost:2525/imposters', json={
     "port": 4545,
     "protocol": "http",
     "stubs": [{
