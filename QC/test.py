@@ -1,5 +1,6 @@
 import main
 
+
 fin = open("test.txt", 'r') # входные данные с тест кейсами
 fout = open("test_resalt.txt", 'w') # выходной файл с результами всех кейс текстов
 count = 0
@@ -14,7 +15,7 @@ for line in fin: # парсинг
         arg = 0
 
 
-    if (main.main(' '.join(line_param[:-1])) == str(line_param[-1])[0:len(line_param[-1])-(1*arg)]):
+    if (main(' '.join(line_param[:-1])) == str(line_param[-1])[0:len(line_param[-1])-(1*arg)]):
         linetoout = str(count) + " succes; " + "\n"
     else:
         linetoout = str(count) + " error; " + "\n"

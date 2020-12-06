@@ -1,9 +1,9 @@
 import main
 
-fin = open("test.txt", 'r') # входные данные с тест кейсами
+fin = open("test.txt", 'r', encoding="utf-8") # входные данные с тест кейсами
 fout = open("test_resalt.txt", 'w') # выходной файл с результами всех кейс текстов
 count = 0
-for line in fin: # парсинг
+for line in fin:
     count += 1
     line_param = line.split(' ')
     if line[-1] != '/n':
